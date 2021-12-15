@@ -1,8 +1,7 @@
 from flask import Blueprint, render_template, redirect, request, url_for, jsonify, session
 from flask.templating import render_template
-# from application import app
+from application import app
 from application import db
-from application import studentCollection
 from bson.objectid import ObjectId
 
 
@@ -17,8 +16,7 @@ def home():
     # data = studentCollection.find({})
     data = db.student.find({})
     total_number = data.count(with_limit_and_skip=True)
-    print(total_number)
-    return render_template('home.html', students = data, total_number = total_number, show_modal=session['show_modal'])
+    return render_template('home.html', students = data, total_number = total_number)
 
     
 
