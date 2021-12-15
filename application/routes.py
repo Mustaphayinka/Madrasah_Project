@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, request, url_for, jsonify, session
 from flask.templating import render_template
-from application import app
-# from application import db
+# from application import app
+from application import db
 from application import studentCollection
 from bson.objectid import ObjectId
 
