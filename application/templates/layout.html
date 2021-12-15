@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+    <link type="text/css" href="@@path/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MALJAU SUNNAH STUDENTS DATA</a>
+        </div>
+      </nav>
+    <div class="container pt-4">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.5/dist/sweetalert2.all.min.js">
+      function validation()
+            swal.fire({
+            title:"Vendor Training Valid",
+            text:"The Vendor activity has been recorded!",
+            icon:"success",
+            closeOnConfirm: false
+            });
+    </script> -->
+    <script src="@@path/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
