@@ -17,8 +17,7 @@ def home():
     # data = studentCollection.find({})
     data = db.student.find({})
     total_number = data.count(with_limit_and_skip=True)
-    print(total_number)
-    return render_template('home.html', students = data, total_number = total_number, show_modal=session['show_modal'])
+    return render_template('home.html', students = data, total_number = total_number)
 
     
 
